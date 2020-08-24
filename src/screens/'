@@ -1,0 +1,55 @@
+import React, { useState, useEffect } from "react";
+import {
+  ScrollView,
+  Text,
+  View,
+  FlatList,
+  StyleSheet
+} from "react-native";
+import { useNavigation } from "@react-navigation/native";
+
+//import { DashboardItemsModel } from "../../models";
+//import { DashboardService } from "../../services";
+
+//import NavigationNames from "../../navigations/NavigationNames";
+
+type TProps = {};
+
+export const ApplicationListScreen: React.FC<TProps> = props => {
+  const navigation = useNavigation();
+  return (
+    <View style={{ flex: 1}}>
+      <ScrollView
+        contentContainerStyle={styles.container}
+        showsVerticalScrollIndicator={false}
+      >
+        <Text title={"Holi"} />
+      </ScrollView>
+    </View>
+  );
+};
+
+const styles = StyleSheet.create({
+  container: { paddingVertical: 24 },
+  upcomingAppoinmentRow: {
+    marginHorizontal: 16
+  },
+  touchableDoctorItem: {
+    paddingStart: 16,
+    paddingEnd: 8
+  },
+  campaignsContainer: {
+    paddingHorizontal: 16,
+    paddingVertical: 12
+  },
+  departmentsContainer: {
+    paddingHorizontal: 16,
+    paddingVertical: 12
+  },
+  horizontalDivider: { width: 12 },
+  iconImage: { 
+    width: 40,
+    height: 40,
+    resizeMode: "contain"
+  }
+});
